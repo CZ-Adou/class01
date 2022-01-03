@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.item{
+  width:33.333333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:30rpx;
+  box-sizing: border-box;
+}
+.item image{
+  width:60rpx;
+  height:60rpx;
+}
+
+.img-box { 
+  display: flex; 
+  justify-content: space-around; 
+  padding: 20rpx 10rpx; 
+}
+.img-box image { 
+  width: 45%; 
+  height: 256rpx; 
+}
