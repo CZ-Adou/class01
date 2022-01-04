@@ -1,2 +1,49 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  <view>
+    手机号支持长按选中效果
+    <text selectable>13000005056</text>
+  </view>
+
+  <rich-text nodes="<h1 style='color: red; text-align:center'> 手冢领域</h1>"></rich-text>
+
+  <!-- 图片组件 -->
+  <image class="imgBox" src="../../images/shouzho.png" mode="aspectFill"></image>
+  <text style="margin: auto 100rpx">{{count1}}</text>
+  <text>{{count2}}</text>
+
+  <!-- 按钮组件 -->
+  <button bindtap="addCount">普通按钮+1</button>
+  <button type="primary" bindtap="btnTap" data-info="{{2}}">主色调按钮+2</button>
+  <button type="warn">警告按钮</button>
+  <!-- 小尺寸按钮 size=“mini” -->
+  <!-- <button size="mini">普通按钮</button>
+<button type="primary" size="mini">主色调按钮</button>
+<button type="warn" size="mini">警告按钮</button> -->
+  <!-- plain 镂空按钮 -->
+  <!-- <button size="mini" plain>普通按钮</button>
+<button type="primary" size="mini" plain>主色调按钮</button>
+<button type="warn" size="mini" plain>警告按钮</button> -->
+  <input type="text" bindinput="inputHandle" value="{{msg}}"> </input>
+
+  <!-- 条件渲染 -->
+  <view wx:if="{{type===1}}">男</view>
+  <view wx:elif="{{type===2}}">女</view>
+  <view wx:else>人妖</view>
+
+  <view hidden="{{!flag}}">条件为true的时候隐藏元素，否则显示</view>
+  <view wx:if="flag">条件为true的时候隐藏元素，否则显示</view>
+
+  <!-- 列表渲染 带key   引入的样式优先级没有 当前类名高-->
+  <view wx:for="{{arr1}}" class="username list" wx:key="id" >
+    索引是 {{index}} 
+    当前项是: {{item.name}}
+  </view>
+  <view>--------------------------------------</view>
+  <!-- 列表渲染 不带key  -->
+  <view wx:for="{{arr2}}" class="list" wx:for-index="idx" wx:for-item="itmName">
+    索引是 {{idx}} 
+    当前项是: {{itmName}}
+  </view>
+
+</view>

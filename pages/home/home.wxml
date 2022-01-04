@@ -1,5 +1,5 @@
-<swiper indicator-dots autoplay circular>
-  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+<swiper indicator-dots autoplay circular indicator-active-color="red" indicator-color="gray">
+  <swiper-item wx:for="{{swiperList}}" wx:key="id" >
     <image style="width:750rpx;" src="{{item.image}}"></image>
   </swiper-item>
 </swiper>
@@ -15,4 +15,8 @@
 <view class="img-box"> 
   <image src="/images/link-01.png"></image> 
   <image src="/images/link-02.png"></image> 
+</view>
+
+<view>
+  <button type="primary" plain bindtap="goIndex">出行</button>
 </view>

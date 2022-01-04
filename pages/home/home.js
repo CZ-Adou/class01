@@ -38,6 +38,15 @@ Page({
       }
     })
   },
+  goIndex() {
+    console.log("11111");
+    wx.redirectTo({
+      url: '/pages/index/index',
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

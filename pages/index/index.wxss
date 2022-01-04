@@ -1,1 +1,26 @@
 /* pages/index/index.wxss */
+@import "/common/common.wxss";
+view {
+  margin-top: 10rpx;
+}
+.container {
+  margin: 0 20rpx;
+
+}
+
+.imgBox {
+  border-radius: 20rpx;
+  width: 710rpx;
+  height: 400rpx;
+}
+input {
+  border: 1rpx solid skyblue;
+  margin: 5rpx;
+  padding: 5rpx;
+  border-radius: 3rpx;
+}
+
+.list {
+  color: red;
+  border: 1rpx solid lightblue;
+}
